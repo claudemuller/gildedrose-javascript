@@ -77,13 +77,15 @@ describe('Gilded Rose', () => {
       expect(items[2].quality).toEqual(23);
     });
 
-    // it('should have increased in quality to double when sellIn less than 5', () => {
-    //   for (let i = 0; i < 10; i++) {
-    //     items = gildedRose.updateQuality();
-    //   }
-    //
-    //   expect(items[2].quality).to.equal(35);
-    // });
+    it('should have increased in quality to double when sellIn less than 5', () => {
+      for (let i = 0; i < 10; i++) {
+        console.log(items);
+        items = gildedRose.updateQuality();
+        console.log(items);
+      }
+
+      expect(items[2].quality).toEqual(35);
+    });
   });
 
   describe('Cheddar Cheese', () => {
@@ -105,13 +107,13 @@ describe('Gilded Rose', () => {
       expect(items[3].quality).toEqual(4);
     });
 
-    // it('should have stopped increasing in quality after 5 days', () => {
-    //   for (let i = 0; i < 5; i++) {
-    //     items = gilgedRose.updateQuality();
-    //   }
-    //
-    //   expect(items[3].quality).to.equal(0);
-    // });
+    it('should have stopped increasing in quality after 5 days', () => {
+      for (let i = 0; i < 5; i++) {
+        items = gildedRose.updateQuality();
+      }
+
+      expect(items[3].quality).toEqual(0);
+    });
   });
 
   describe('Bread', () => {
@@ -133,13 +135,13 @@ describe('Gilded Rose', () => {
       expect(items[4].quality).toEqual(9);
     });
 
-    // it('should have stopped increasing in quality after 2 days', () => {
-    //   for (let i = 0; i < 2; i++) {
-    //     items = gilgedRose.updateQuality();
-    //   }
-    //
-    //   expect(items[4].quality).to.equal(5);
-    // });
+    it('should have stopped increasing in quality after 2 days', () => {
+      for (let i = 0; i < 2; i++) {
+        items = gildedRose.updateQuality();
+      }
+
+      expect(items[4].quality).toEqual(5);
+    });
   });
 
   describe('Conjured', () => {
